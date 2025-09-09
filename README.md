@@ -16,7 +16,7 @@ Installed pipx
 installed nbstripout
 ```pipx install nbstripout ```
 
-Add .gitattributes has been added to configure nbstripout and gitdiff
+Add .gitattributes to configure nbstripout and gitdiff
 ```
 # Strip Jupyter notebook outputs & execution counts before committing
 *.ipynb filter=nbstripout diff=jupyternotebook
