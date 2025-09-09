@@ -8,7 +8,10 @@
 #### .gitattributes has been added.
 ```
 # Strip Jupyter notebook outputs & execution counts before committing
-*.ipynb filter=nbstripout
+*.ipynb filter=nbstripout diff=jupyternotebook
+
+*.zpln filter=nbstripout
+*.ipynb diff=ipynb
 ```
 #### To configure nbstripout
 ```nbstripout --install --attributes .gitattributes ```
