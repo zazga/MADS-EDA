@@ -1,5 +1,5 @@
 # Strip Jupyter notebook outputs & execution counts before committing
-*.ipynb filter=nbstripout
+*.ipynb filter=nbstripout diff=jupyternotebook
 
 
 *.zpln filter=nbstripout
