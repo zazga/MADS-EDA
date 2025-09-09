@@ -11,12 +11,13 @@ you can change all values you want to use in the .env file
 
 # Housekeeping
 ### Prevent notebooks from littering the git repo, 
-Installed pipx
+- Installed pipx
 ```brew install pipx ```
-installed nbstripout
+
+- installed nbstripout
 ```pipx install nbstripout ```
 
-Add .gitattributes to configure nbstripout and gitdiff
+- Add .gitattributes to configure nbstripout and gitdiff
 ```
 # Strip Jupyter notebook outputs & execution counts before committing
 *.ipynb filter=nbstripout diff=jupyternotebook
@@ -24,12 +25,13 @@ Add .gitattributes to configure nbstripout and gitdiff
 *.zpln filter=nbstripout
 *.ipynb diff=ipynb
 ```
-Install nbstripout in current repo with correct configuration
+
+- Install nbstripout in current repo with correct configuration
 ```nbstripout --install --attributes .gitattributes ```
 
-Keeping git status clean
+- Keeping git status clean
 ``` 
 git config diff.jupyternotebook.textconv "jq -r '.cells[].source | select(. != null) | .[]'" 
 ```
-If this fails, it might mean you have to install jq
+  - If this fails, it might mean you have to install jq
 ```brew install jq ```
