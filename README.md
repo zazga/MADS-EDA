@@ -17,10 +17,10 @@ you can change all values you want to use in the .env file
 - installed nbstripout
 ```pipx install nbstripout ```
 
-- Add .gitattributes to configure nbstripout and gitdiff
+- Add .gitattributes to configure nbstripout
 ```
 # Strip Jupyter notebook outputs & execution counts before committing
-*.ipynb filter=nbstripout diff=jupyternotebook
+*.ipynb filter=nbstripout
 
 *.zpln filter=nbstripout
 *.ipynb diff=ipynb
@@ -30,6 +30,11 @@ you can change all values you want to use in the .env file
 ```nbstripout --install --attributes .gitattributes ```
 
 ### Keeping git status clean
+- Add to .gitattributes
+```
+diff=jupyternotebook
+```
+  
 ``` 
 git config diff.jupyternotebook.textconv "jq -r '.cells[].source | select(. != null) | .[]'" 
 ```
