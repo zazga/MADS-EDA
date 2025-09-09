@@ -1,15 +1,22 @@
 # MADS-EDA
-## To run the container, go to the folder containing the docker-compose file you want to run, and run:
+# Running the containers:
+cd to the folder containing the docker-compose file you want to start, and run:
 ``` docker compose up --build -d ```
 
-## If you want to use your own settings for the docker containers, rename the .env.example file to .env, and fill in the values you want the configuration to use.
+If you want to use your own settings for the docker containers:
+```mv .env.example .env ```
+you can change all values you want to use in the .env file
 
-#### To prevent notebooks from littering the git repo, nbstripout has been installed with pipx.
+
+
+# Housekeeping
+### Prevent notebooks from littering the git repo, 
+Installed pipx
 ```brew install pipx ```
-
+installed nbstripout
 ```pipx install nbstripout ```
 
-#### .gitattributes has been added.
+Add .gitattributes has been added to configure nbstripout and gitdiff
 ```
 # Strip Jupyter notebook outputs & execution counts before committing
 *.ipynb filter=nbstripout diff=jupyternotebook
@@ -17,13 +24,12 @@
 *.zpln filter=nbstripout
 *.ipynb diff=ipynb
 ```
-#### To configure nbstripout
+Install nbstripout in current repo with correct configuration
 ```nbstripout --install --attributes .gitattributes ```
 
-#### To keep your git status clean, run this command.
+Keeping git status clean
 ``` 
 git config diff.jupyternotebook.textconv "jq -r '.cells[].source | select(. != null) | .[]'" 
 ```
-
 If this fails, it might mean you have to install jq
 ```brew install jq ```
