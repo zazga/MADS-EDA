@@ -1,4 +1,8 @@
 # MADS-EDA
+## To run the container, go to the folder containing the docker-compose file you want to run, and run:
+``` docker compose up --build -d ```
+
+## If you want to use your own settings for the docker containers, rename the .env.example file to .env, and fill in the values you want the configuration to use.
 
 #### To prevent notebooks from littering the git repo, nbstripout has been installed with pipx.
 ```brew install pipx ```

@@ -1,8 +1,9 @@
 services:
   jupyter:
+    build: .
     image: jupyternotebook:latest
     ports:
-      - "8888:8888"
+      - "${APP_PORT:-8888}:8888"
     volumes:
-      - ./../../notebooks:/home/jovyan/work
-      - ./../../datasets:/home/jovyan/datasets
+      - "${NOTEBOOK_FOLDER:-./../../notebooks}:/home/jovyan/work"
+      - "${DATASET_FOLDER:-./../../datasets}:/home/jovyan/datasets"
