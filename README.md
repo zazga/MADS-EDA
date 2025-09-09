@@ -29,7 +29,7 @@ you can change all values you want to use in the .env file
 - Install nbstripout in current repo with correct configuration
 ```nbstripout --install --attributes .gitattributes ```
 
-- Keeping git status clean
+### Keeping git status clean
 ``` 
 git config diff.jupyternotebook.textconv "jq -r '.cells[].source | select(. != null) | .[]'" 
 ```
