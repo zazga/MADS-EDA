@@ -5,5 +5,14 @@ services:
     ports:
       - "${APP_PORT:-8888}:8888"
     volumes:
-      - "${NOTEBOOK_FOLDER:-./../../notebooks}:/home/jovyan/work"
-      - "${DATASET_FOLDER:-./../../datasets}:/home/jovyan/datasets"
+      - "${NOTEBOOK_FOLDER:-./../../notebooks}:/home/jovyan/work/notebooks"
+      - "${DATASET_FOLDER:-./../../datasets}:/home/jovyan/work/datasets"
+      - "./../../uv_files:/home/jovyan/work/uv_files"
+    environment:
+      - "JUPYTER_ENABLE_LAB=${JUPYTER_ENABLE_LAB:-yes}"
+    command: >
+      bash -c "
+        cd /home/jovyan/work/uv_files/ &&
+        uv sync --frozen --no-dev &&
+        start-notebook.sh --NotebookApp.notebook_dir=/home/jovyan/work --NotebookApp.token='' --NotebookApp.password=''
+      "

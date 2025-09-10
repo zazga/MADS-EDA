@@ -11,11 +11,8 @@ you can change all values you want to use in the .env file
 
 # Housekeeping
 ### Prevent notebooks from littering the git repo, 
-- Installed pipx
-```brew install pipx ```
-
 - installed nbstripout
-```pipx install nbstripout ```
+```uv install nbstripout ```
 
 - Add .gitattributes to configure nbstripout
 ```

@@ -1,0 +1,12 @@
+[project]
+name = "my-datascience-project"
+version = "0.1.0"
+description = "Exploratory data analysis project"
+dependencies = [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "scikit-learn",
+    "jupyterlab",
+    "seaborn"
+]
