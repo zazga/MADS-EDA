@@ -1,6 +1,5 @@
 # MADS-EDA
 # Running the containers:
-cd to the folder containing the docker-compose file you want to start, and run:
 ``` docker compose -f docker/jupyterNotebooks/docker-compose.yaml up --build -d ```
 # Stopping the containers:
 ``` docker compose -f docker/jupyterNotebooks/docker-compose.yaml down```
