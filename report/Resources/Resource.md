@@ -1,0 +1,1 @@
+this is where every resource will go for easy embedding

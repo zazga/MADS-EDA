@@ -1,0 +1,19 @@
+/* Hide Obsidian's embed title container */
+.internal-embed[alt~="no-embed-title"] .markdown-embed-title {
+  display: none !important;
+}
+
+/* Hide the inline title (some themes show it) */
+.internal-embed[alt~="no-embed-title"] .inline-title {
+  display: none !important;
+}
+
+/* Hide the FIRST heading inside the embed */
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h1:first-of-type,
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h2:first-of-type,
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h3:first-of-type,
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h4:first-of-type,
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h5:first-of-type,
+.internal-embed[alt~="no-embed-title"] .markdown-embed-content h6:first-of-type {
+  display: none !important;
+}

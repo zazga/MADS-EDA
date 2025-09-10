@@ -1,0 +1,13 @@
+/* Remove purple line on embedded notes */
+.markdown-embed {
+  border-left: none !important;
+}
+
+.markdown-embed-content {
+  border-left: none !important;
+}
+
+body {
+  --embed-border-left: none !important;
+  --embed-border-color: transparent !important;
+}

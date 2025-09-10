@@ -1,0 +1,1 @@
+A miniature version of our research paper, giving our readers a complete summary of our paper. It should interest readers to read every other aspect of our paper.

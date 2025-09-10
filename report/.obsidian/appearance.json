@@ -1,0 +1,7 @@
+{
+  "enabledCssSnippets": [
+    "remove_purple_border",
+    "remove_purple_embed_border",
+    "remove_embed_header"
+  ]
+}
