@@ -1,5 +1,5 @@
 # Obsidian
-To be consistent with everyone working on the report, use the tool [Obsidian](https://obsidian.md/). Open the report folder as a vault in obsidian. The entire report will be written in markdown. Whenever you make changes, be sure to `git add`, `git commit -m "added X to report"` and `git push` so others can `git pull` your changes
+To be consistent with everyone working on the report, use the tool [Obsidian](https://obsidian.md/). Open the report folder as a vault in obsidian. The entire report will be written in markdown. Whenever you make changes, be sure to `git add .`, `git commit -m "added X to report"` and `git push` so others can `git pull` your changes
 # Report
 Every chapter should be created in its own separate chapter file. The full report will be automatically generated from all files combined.
 
