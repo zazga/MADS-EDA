@@ -1,3 +1,5 @@
+# Obsidian
+To be consistent with everyone working on the report, use the tool [Obsidian](https://obsidian.md/). The entire report will be written in markdown.
 # Report
 Every chapter should be created in its own separate chapter file. The full report will be automatically generated from all files combined.
 
